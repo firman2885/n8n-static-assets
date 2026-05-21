@@ -1,1 +1,110 @@
-sss
+/* ========== BASE STYLES ========== */
+*{box-sizing:border-box}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#eef2f3;margin:0;padding:16px}
+.main-container{max-width:100%;margin:0 auto}
+
+/* ========== HEADER ========== */
+.header{background:linear-gradient(135deg,#16a34a 0%,#0d6e2e 100%);color:white;padding:20px 24px;border-radius:16px 16px 0 0}
+.header h2{margin:0;font-size:1.5rem}
+.header .source{opacity:0.85;font-size:13px;margin-top:6px}
+
+/* ========== INFO BAR ========== */
+.info-bar{background:white;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid #e2e8f0}
+.loan-count{font-weight:600;color:#16a34a;background:#dcfce7;padding:6px 14px;border-radius:40px;font-size:13px}
+.button-group{display:flex;gap:10px}
+.refresh-btn,.back-btn{padding:8px 18px;border:none;border-radius:40px;cursor:pointer;font-weight:600;font-size:13px}
+.refresh-btn{background:#f59e0b;color:white}
+.back-btn{background:#475569;color:white}
+
+/* ========== BULK ACTIONS ========== */
+.bulk-actions{background:white;padding:14px 24px;display:flex;align-items:center;gap:15px;flex-wrap:wrap;border-bottom:1px solid #e2e8f0}
+.bulk-actions button{background:#16a34a;color:white;border:none;padding:8px 20px;border-radius:40px;cursor:pointer;font-weight:bold}
+.bulk-actions button:disabled{background:#9ca3af;cursor:not-allowed}
+.progress-bar-container{background:#e5e7eb;border-radius:40px;height:8px;width:200px;overflow:hidden}
+.progress-bar{background:#16a34a;height:100%;width:0%;transition:width 0.3s}
+.status-text{margin-left:10px;font-size:12px;color:#475569}
+
+/* ========== SEARCH BOX ========== */
+.search-box{background:white;padding:14px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;border-bottom:1px solid #e2e8f0}
+.search-box label{font-weight:600;font-size:13px}
+.search-box input{padding:8px 14px;width:280px;border:1px solid #cbd5e1;border-radius:40px;font-size:13px}
+.search-btn,.clear-btn{padding:8px 18px;border:none;border-radius:40px;cursor:pointer;font-weight:600;font-size:12px}
+.search-btn{background:#16a34a;color:white}
+.clear-btn{background:#94a3b8;color:white}
+.search-hint{font-size:11px;color:#6b7280;margin-left:8px}
+
+/* ========== FILTER LINK ========== */
+.filter-link{color:#16a34a;text-decoration:none;cursor:pointer;font-weight:600}
+.filter-link:hover{text-decoration:underline;color:#0d6e2e}
+
+/* ========== BALANCE SUMMARY TOOLTIP ========== */
+.balance-summary-icon{position:relative;margin-left:auto;display:flex;align-items:center}
+.summary-trigger{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#e2e8f0;border-radius:50%;cursor:help;font-size:18px;font-weight:bold;color:#16a34a;transition:all 0.2s}
+.summary-trigger:hover{background:#16a34a;color:white}
+.balance-summary-tooltip{position:absolute;top:100%;right:0;margin-top:10px;background:white;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.15);min-width:300px;max-width:400px;z-index:1000;display:none;border:1px solid #e2e8f0;overflow:hidden}
+.balance-summary-icon:hover .balance-summary-tooltip{display:block}
+.tooltip-header{background:linear-gradient(135deg,#16a34a 0%,#0d6e2e 100%);color:white;padding:10px 15px;font-weight:bold;font-size:13px}
+.tooltip-content{padding:12px;max-height:350px;overflow-y:auto;font-size:12px}
+.summary-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0}
+.summary-row:last-child{border-bottom:none}
+.summary-borrower{font-weight:600;color:#1f2937;word-break:break-word;padding-right:10px}
+.summary-balance{color:#16a34a;font-weight:bold;white-space:nowrap}
+.summary-empty{text-align:center;color:#9ca3af;padding:15px}
+.summary-total-borrowers{padding-bottom:8px;margin-bottom:8px;border-bottom:1px solid #e2e8f0;color:#6b7280;font-size:11px}
+
+/* ========== TABLE ========== */
+.row-count{background:white;padding:8px 24px;font-size:12px;color:#475569;border-bottom:1px solid #e2e8f0}
+.table-container{background:white;padding:16px;overflow-x:auto;border-radius:0 0 16px 16px;box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:1300px}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left;vertical-align:middle}
+th{background:#f8fafc;color:#1e293b;font-weight:700;font-size:12px;position:sticky;top:0;white-space:nowrap}
+tr:hover{background:#fefce8}
+td:first-child,th:first-child{position:sticky;left:0;background:white;z-index:1}
+th:first-child{background:#f8fafc;z-index:2}
+.text-right{text-align:right}
+.checkbox-col{width:70px;text-align:center}
+
+/* ========== TOGGLE BUTTON ========== */
+.toggle-btn{background:#16a34a;color:white;border:none;border-radius:4px;padding:4px 8px;font-size:11px;cursor:pointer;min-width:65px}
+
+/* ========== BADGES ========== */
+.badge{display:inline-block;padding:3px 8px;border-radius:40px;font-size:10px;font-weight:600}
+.badge-full{background:#dcfce7;color:#166534}
+.badge-late{background:#fed7aa;color:#9a3412}
+.badge-await{background:#e0e7ff;color:#3730a3}
+
+/* ========== VALIDATION MESSAGES ========== */
+.validation-warning{background:#fef9c3;border-left:4px solid #eab308;padding:15px;border-radius:10px;margin:10px 0;font-size:13px}
+.validation-error{background:#fee2e2;border-left:4px solid #dc2626;padding:15px;border-radius:10px;margin:10px 0;font-size:13px}
+
+/* ========== MODAL ========== */
+.modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}
+.modal-content{background-color:white;margin:10% auto;padding:0;width:90%;max-width:550px;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,0.2)}
+.modal-header{padding:16px 20px;border-radius:16px 16px 0 0;color:white;font-weight:bold;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+.modal-header.success{background:#16a34a}
+.modal-header.error{background:#dc2626}
+.modal-header.warning{background:#f59e0b}
+.modal-header .close{color:white;font-size:24px;font-weight:bold;cursor:pointer}
+.modal-body{padding:20px;max-height:400px;overflow-y:auto}
+.modal-body pre{background:#f1f5f9;padding:12px;border-radius:8px;font-size:12px;overflow-x:auto;white-space:pre-wrap;margin:0}
+.modal-footer{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-top:1px solid #e2e8f0}
+.modal-footer button{padding:8px 20px;background:#16a34a;color:white;border:none;border-radius:8px;cursor:pointer}
+.refresh-info{font-size:12px;color:#666}
+
+/* ========== LOADING ANIMATION ========== */
+.loading{display:inline-block;width:12px;height:12px;border:2px solid white;border-top:2px solid transparent;border-radius:50%;animation:spin 0.6s linear infinite;margin-right:6px}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+
+/* ========== NOTE & WARNING TEXT ========== */
+.note-text{background:#fef9c3;padding:8px 15px;border-radius:8px;font-size:11px;color:#854d0e;margin:10px 24px 0;display:inline-block}
+.warning-text{background:#fee2e2;padding:8px 15px;border-radius:8px;font-size:11px;color:#991b1b;margin:10px 24px 0;display:inline-block}
+
+/* ========== BLINKING ANIMATION FOR CLOCK ========== */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+.blinking {
+  animation: blink 1s step-start infinite;
+}
